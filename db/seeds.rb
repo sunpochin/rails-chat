@@ -7,11 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(username:"patrick", password:"password")
-
 User.create(username:"jonsnow", password:"password")
-
 User.create(username:"arya", password:"password")
-
 User.create(username:"hodor", password:"password")
 
 User.create(username:"gandalf", password:"password")
+
+Message.create(body: "Hi I'm a message", user: User.first)
+
+Message.create(body: "Hi it's patrick speaking", user: User.second)
+Message.create(body: "I know nothing.", user: User.second)
+Message.create(body: "Hold the door", user: User.last)
+Message.create(body: "You cannot pass!", user: User.last)
