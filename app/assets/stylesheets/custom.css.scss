@@ -2,3 +2,8 @@
 .chatbox {
   height: 450px;
 }
+
+#messages-content {
+  overflow: auto;
+  height: 15em;
+}

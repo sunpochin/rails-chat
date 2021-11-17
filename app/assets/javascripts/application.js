@@ -17,14 +17,20 @@
 //= require jquery
 //= require semantic-ui
 
+scroll_bottom = function() {
+  if ($('#messages-content').length > 0) {
+    $('#messages-content').scrollTop($('#messages-content')[0].scrollHeight);
+  }
+}
+
 $(document).on('turbolinks:load', function() {
   $('.ui.dropdown').dropdown();
   $('.message .close')
   .on('click', function() {
     $(this)
       .closest('.message')
-      .transition('fade')
-    ;
-  })
-;  
+      .transition('fade');
+  });
+  
+  scroll_bottom();
 });
